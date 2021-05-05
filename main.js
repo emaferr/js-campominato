@@ -55,14 +55,20 @@ var numeriInseriti = [];
 for (var i = 1; i <= (limite); i++) {
     var numeroUtente = parseInt(prompt("Inserisci un numero compreso tre 1 e " + limite));
 
-    if (numeroUtente = NaN) {
+    if (numeroUtente == "") {
         break;
     }
 
-    console.log(numeroUtente);
     while (numeroUtente < 1 || numeroUtente > limite || isNaN(numeroUtente)) {
+
+        // Aggiungo la possibilità di uscire al click annulla
+        if (null(numeroUtente)){
+            break;
+        }
+
         alert("Devi inserire un numero tra uno e " + limite)
         numeroUtente = parseInt(prompt("Inserisci un numero compreso tre 1 e " + limite));
+
     }
 
     if ( !numeriInseriti.includes(numeroUtente)) {
@@ -85,6 +91,7 @@ if (numeriInseriti.length == (limite - 16)) {
 
     alert("Hai vinto, punti totali " + numeriInseriti.length);
 }
+
 
 
 
