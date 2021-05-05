@@ -8,6 +8,11 @@ var livello = parseInt(prompt("Scegli un livello di difficoltà! 0 - 1 - 2"));
 
 // Controllo se il numero inserito dall'Utente e compreso fra quelli richiesti
 while (livello > 3 || isNaN(livello)) {
+    
+    if (null(livello)){
+        break;
+    }
+
     alert("Devi inserire un numero 0 - 1 - 2")
     livello = parseInt(prompt("Scegli un livello di difficoltà! 0 - 1 - 2"));
 }
@@ -54,10 +59,6 @@ var numeriInseriti = [];
 
 for (var i = 1; i <= (limite); i++) {
     var numeroUtente = parseInt(prompt("Inserisci un numero compreso tre 1 e " + limite));
-
-    if (numeroUtente == "") {
-        break;
-    }
 
     while (numeroUtente < 1 || numeroUtente > limite || isNaN(numeroUtente)) {
 
